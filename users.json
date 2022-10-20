@@ -1,0 +1,273 @@
+[{
+  "_id": {
+    "$oid": "635021785d6835e965c48be8"
+  },
+  "username": "raphy.bihis",
+  "name": "Raphael Bihis",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666195832334"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666195832334"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63512c3ce80757b63152d209"
+  },
+  "username": "mary.prices",
+  "name": "Mary T. Prices",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666264124784"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666264124784"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63512c4de80757b63152d20b"
+  },
+  "username": "user1",
+  "name": "Bojana Novaković",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666264141751"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666264141751"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63512c5ee80757b63152d20d"
+  },
+  "username": "user2",
+  "name": "Ali Sage",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666264158835"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666264158835"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63512d1ee80757b63152d20f"
+  },
+  "username": "user2",
+  "name": "Mr Smartypants",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666264350478"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666264350478"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63512d49e80757b63152d211"
+  },
+  "username": "user4",
+  "name": "Katie Blackman",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666264393637"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666264393637"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63512d54e80757b63152d213"
+  },
+  "username": "user5",
+  "name": "Suoma Narjus",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666264404835"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666264404835"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63512d7fe80757b63152d215"
+  },
+  "username": "user7",
+  "name": "Harold Lachlan",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666264447588"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666264447588"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63512df87716869487d1a83a"
+  },
+  "username": "user8",
+  "name": "",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666264568334"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666264568334"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63512eb77716869487d1a83c"
+  },
+  "username": "user9",
+  "name": "Sandra Ortega",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666264759952"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666264759952"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63512eea7716869487d1a83e"
+  },
+  "username": "user10",
+  "name": "William Hunt",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666264810649"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666264810649"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63512f477716869487d1a840"
+  },
+  "username": "user11",
+  "name": "Hamish Sutcliffe",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666264903811"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666264903811"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63512f627716869487d1a842"
+  },
+  "username": "user12",
+  "name": "An Mao",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666264930651"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666264930651"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63512f747716869487d1a844"
+  },
+  "username": "user13",
+  "name": "Eugenio Bertè",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666264948831"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666264948831"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63512fa37716869487d1a846"
+  },
+  "username": "user14",
+  "name": "Chuck Looij",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666264995219"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666264995219"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6351373bed949c68c6ab0c99"
+  },
+  "username": "user15",
+  "name": "Harold Lachlan",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666266939221"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666266939221"
+    }
+  },
+  "__v": 0
+}]

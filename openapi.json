@@ -1,0 +1,428 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API Service",
+    "version": "1.0.0",
+    "description": "API Service endpoints"
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "tags": [
+    {
+      "name": "notifications-feed",
+      "description": "Notifications Feed APIs"
+    }
+  ],
+  "paths": {
+    "/users": {
+      "get": {
+        "tags": ["notifications-feed"],
+        "summary": "Get all users",
+        "operationId": "users-all",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "users": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/UserSchema"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerErrorSchema"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["notifications-feed"],
+        "summary": "Adds a user to the database",
+        "operationId": "users-add",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserSchema"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "User was added",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestSchema"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerErrorSchema"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/{userId}/posts": {
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userId",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "User ID of the post creator"
+          }
+        ],
+        "tags": ["notifications-feed"],
+        "summary": "Get all user posts",
+        "operationId": "posts-all",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "posts": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/PostSchema"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerErrorSchema"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userId",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "User ID of the post creator"
+          }
+        ],
+        "tags": ["notifications-feed"],
+        "summary": "Adds a user post to the database",
+        "operationId": "posts-add",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostSchema"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Post was added",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestSchema"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerErrorSchema"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/posts/{postId}/reactions": {
+      "get": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "postId",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID of the post"
+          }
+        ],
+        "tags": ["notifications-feed"],
+        "summary": "Get all reactions in a post",
+        "operationId": "reactions-all",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "reactions": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ReactionSchema"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerErrorSchema"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "postId",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "ID of the post"
+          }
+        ],
+        "tags": ["notifications-feed"],
+        "summary": "React to a post",
+        "operationId": "reactions-add",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReactionSchema"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Post was added",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequestSchema"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerErrorSchema"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  },
+  "components": {
+    "schemas": {
+      "BadRequestSchema": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "description": "Error message",
+            "example": "PATH: [author] ;; MESSAGE: \"author\" is required"
+          }
+        },
+        "required": ["error"]
+      },
+      "ServerErrorSchema": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "description": "Error message",
+            "example": "Internal server error"
+          }
+        },
+        "required": ["error"]
+      },
+      "NotFoundErrorSchema": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "description": "Error message",
+            "example": "Item not found"
+          }
+        },
+        "required": ["error"]
+      },
+      "PostSchema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Title of the post",
+            "example": "How to tackle fake news"
+          },
+          "userId":{
+            "type": "string",
+            "description": "Id of the user who published the the post",
+            "example": "634abbbc12208c8bb368c883"
+          }
+        },
+        "required": ["title", "userId"]
+      },
+      "UserSchema": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "Name of the User",
+            "example": "raphy.bihis"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the User",
+            "example": "Raphael Bihis"
+          }
+        },
+        "required": ["name", "username"]
+      },
+      "ReactionSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Reaction type",
+            "example": "like"
+          },
+          "postId": {
+            "type": "string",
+            "description": "ID of the post where this reaction belongs",
+            "example": "634abbbc12208c8bb368c8c5"
+          },
+          "userId": {
+            "type": "string",
+            "description": "ID of the user who reacted",
+            "example": "634abbbc12208c8bb368c835"
+          },
+          "commentText": {
+            "type": "string",
+            "description": "Comment text if type is comment",
+            "example": "Im commenting for this post"
+          }
+        },
+        "required": ["postId", "type", "userId"]
+      },
+      "NotificationSchema": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Reaction type",
+            "example": "like"
+          },
+          "postId": {
+            "type": "string",
+            "description": "ID of the post where this reaction belongs",
+            "example": "634abbbc12208c8bb368c8c5"
+          },
+          "commentText": {
+            "type": "string",
+            "description": "Comment text if type is comment",
+            "example": "Im commenting for this post"
+          }
+        },
+        "required": ["postId", "type"]
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+1st GET /users/:userId/notifs?type=like/comment&&read=false/true
+get aggregated
+query:
+	type = like/comment (default: all)
+	read = true/false (default: all)
+
+returns: {
+	notifications: [{ // Likes and comments that are unread by the user
+		postId,
+		title,
+		likes: [{userIds, name}],
+		comments: [{userIds, name, commentText}],
+		read: false
+    },
+	{ // Likes and comments that are read by the user
+		postId,
+		title,
+		likes: [{userIds, name}],
+		comments: [{userIds, name, commentText}],
+		read: true
+    },
+	...
+	]
+} 
+
+------------------------------------------------------------------------------------
+
+2nd - POST /posts/:postId/reactions
+path:
+	postId = id of the post (required)
+req.body
+{
+	type: 'comment',
+	userId: 'string',
+	commentText: 'string', 
+}
+
+------------------------------------------------------------------------------------
+
+3rd - PUT /user/:userId/notifs/mark
+query:
+	type = like/comment (default: all)
